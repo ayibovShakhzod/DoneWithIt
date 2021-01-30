@@ -14,6 +14,7 @@ export default function ListItem({
   subTitle,
   image,
   onPress,
+  IconComponent,
   renderRightActions
 }) {
   return (
@@ -23,12 +24,15 @@ export default function ListItem({
         onPress={onPress}
       >
         <View style={styles.container}>
-          <Image style={styles.image} source={image} />
-          <View>
+          {IconComponent}
+          {image && (
+            <Image style={styles.image} source={image} />
+          )}
+          <View style={styles.detailsContainer}>
             <AppText style={styles.title}>{title}</AppText>
-            <AppText style={styles.subTitle}>
+           {subTitle && <AppText style={styles.subTitle}>
               {subTitle}
-            </AppText>
+            </AppText>}
           </View>
         </View>
       </TouchableHighlight>
@@ -39,13 +43,17 @@ export default function ListItem({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    padding: 15
+    padding: 15,
+    backgroundColor: colors.white,
   },
   image: {
     width: 70,
     height: 70,
-    borderRadius: 35,
-    marginRight: 10
+    borderRadius: 35
+  },
+  detailsContainer: {
+    marginLeft: 10,
+    justifyContent: 'center',
   },
   title: {
     fontWeight: '500'

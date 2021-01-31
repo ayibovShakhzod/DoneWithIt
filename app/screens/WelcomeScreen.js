@@ -6,7 +6,7 @@ import {
   Text,
   View
 } from 'react-native';
-import AppButton from '../components/Button/Button';
+import AppButton from '../components/Button';
 
 export default WelcomeScreen = () => {
   return (

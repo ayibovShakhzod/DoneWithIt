@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 
 import AppText from '../Text';
 import Icon from '../Icon';
@@ -9,14 +9,14 @@ export default function CategoryPickerItem({
   onPress
 }) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Icon
         backgroundColor={item.backgroundColor}
         name={item.icon}
-        size={80}
+        size={50}
       />
       <AppText style={styles.label}>{item.label}</AppText>
-    </View>
+    </TouchableOpacity>
   );
 }
 

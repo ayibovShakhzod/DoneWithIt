@@ -1,14 +1,13 @@
 import React from 'react';
 import {
   StyleSheet,
-  Text,
   View,
   FlatList
 } from 'react-native';
-import Icon from '../components/Icon';
 
-import ListItem from '../components/ListItem';
-import ListItemSeparator from '../components/ListItemSeparator';
+import Icon from '../components/Icon';
+import ListItem from '../components/list/ListItem';
+import ListItemSeparator from '../components/list/ListItemSeparator';
 import Screen from '../components/Screen';
 import colors from '../config/colors';
 
@@ -58,11 +57,14 @@ export default function AccountScreen() {
           )}
         />
       </View>
-      <ListItem 
-      title="Log Out"
-      IconComponent={
-            <Icon name="logout" backgroundColor={colors.gold}/>
-      }
+      <ListItem
+        title="Log Out"
+        IconComponent={
+          <Icon
+            name="logout"
+            backgroundColor={colors.gold}
+          />
+        }
       />
     </Screen>
   );

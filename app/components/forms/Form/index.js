@@ -1,6 +1,6 @@
 import React from 'react';
-import { Formik } from 'formik';
 import { StyleSheet } from 'react-native';
+import { Formik } from 'formik';
 
 export default function AppForm({
   initialValues,

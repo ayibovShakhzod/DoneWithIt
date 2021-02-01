@@ -1,12 +1,13 @@
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
+import * as Yup from 'yup';
+
 import {
   AppForm,
   AppFormField,
   SubmitButton
 } from '../components/forms';
 import Screen from '../components/Screen';
-import * as Yup from 'yup';
 
 export default function RegisterScreen() {
   const validationSchema = Yup.object().shape({

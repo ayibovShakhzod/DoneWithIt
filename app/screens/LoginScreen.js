@@ -1,7 +1,8 @@
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
-import Screen from '../components/Screen';
 import * as Yup from 'yup';
+
+import Screen from '../components/Screen';
 import {
   AppForm,
   AppFormField,

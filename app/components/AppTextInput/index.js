@@ -18,6 +18,7 @@ export default function AppTextInput({
         />
       )}
       <TextInput
+        placeholderTextColor={defaultStyles.colors.grey}
         style={[defaultStyles.text, styles.input]}
         {...otherProps}
       />

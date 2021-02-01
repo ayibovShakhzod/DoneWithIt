@@ -6,12 +6,10 @@ import {
   Text,
   Switch
 } from 'react-native';
-import AppPicker from './app/components/AppPicker';
-import AppTextInput from './app/components/AppTextInput';
-import Screen from './app/components/Screen';
-import LoginScreen from './app/screens/LoginScreen';
+import ListingEditScreen from './app/screens/ListingEditScreen';
+import RegisterScreen from './app/screens/RegisterScreen';
 export default function App() {
   return (
-    <LoginScreen />
+    <ListingEditScreen />
   );
 }

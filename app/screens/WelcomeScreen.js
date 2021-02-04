@@ -9,10 +9,10 @@ import {
 
 import AppButton from '../components/Button';
 
-export default WelcomeScreen = () => {
+export default WelcomeScreen = ({ navigation }) => {
   return (
     <ImageBackground
-      blurRadius={10}
+      blurRadius={2}
       source={require('../assets/background.jpg')}
       style={styles.background}
     >
@@ -26,8 +26,15 @@ export default WelcomeScreen = () => {
         </Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <AppButton title="Login" />
-        <AppButton title="Register" color="secondary" />
+        <AppButton
+          title="Login"
+          onPress={() => navigation.navigate('Login')}
+        />
+        <AppButton
+          title="Register"
+          color="secondary"
+          onPress={() => navigation.navigate('Register')}
+        />
       </View>
     </ImageBackground>
   );

@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  StyleSheet,
-  View,
-  FlatList
-} from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 
 import Icon from '../components/Icon';
 import ListItem from '../components/list/ListItem';
@@ -24,10 +20,11 @@ const menuItems = [
     icon: {
       name: 'email',
       backgroundColor: colors.secondary
-    }
+    },
+    targetScreen: 'Messages'
   }
 ];
-export default function AccountScreen() {
+export default function AccountScreen({ navigation }) {
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
@@ -52,6 +49,9 @@ export default function AccountScreen() {
                     item.icon.backgroundColor
                   }
                 />
+              }
+              onPress={() =>
+                navigation.navigate(item.targetScreen)
               }
             />
           )}

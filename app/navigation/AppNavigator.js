@@ -11,7 +11,16 @@ import navigationTheme from './navigationTheme';
 const Tab = createBottomTabNavigator();
 
 export default AppNavigator = () => (
-  <Tab.Navigator>
+  <Tab.Navigator
+    tabBarOptions={{
+      style: {
+        elevation: 0, // remove shadow on Android
+        shadowOpacity: 0, // remove shadow on iOS
+        borderTopWidth: 0,
+        paddingBottom: 5
+      }
+    }}
+  >
     <Tab.Screen
       name="Feed"
       component={FeedNavigator}

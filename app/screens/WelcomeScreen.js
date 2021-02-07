@@ -12,7 +12,7 @@ import AppButton from '../components/Button';
 export default WelcomeScreen = ({ navigation }) => {
   return (
     <ImageBackground
-      blurRadius={2}
+      blurRadius={3}
       source={require('../assets/background.jpg')}
       style={styles.background}
     >

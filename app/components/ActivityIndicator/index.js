@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
     height: 100,
     alignSelf: 'center',
     position: 'absolute',
-    zIndex: 9999
+    zIndex: 1
   }
 });

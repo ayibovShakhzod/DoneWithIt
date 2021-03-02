@@ -17,6 +17,7 @@ export default FeedNavigator = () => (
     />
     <Stack.Screen
       name="ListingDetails"
+      mode="modal"
       component={ListingDetailsScreen}
     />
   </Stack.Navigator>

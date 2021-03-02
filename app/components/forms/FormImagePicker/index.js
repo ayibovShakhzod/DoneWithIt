@@ -24,7 +24,7 @@ export default FormImagePicker = ({ name }) => {
   return (
     <>
       <ImageInputList
-        imageUris={values[name]}
+        imageUris={imageUris}
         onAddImage={handleAdd}
         onRemoveImage={handleRemove}
       />
